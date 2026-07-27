@@ -30,6 +30,7 @@ This repository contains study materials for the **Claude Certified Architect â€
 - **Vietnamese guide**: [`guide_vi.md`](./guide_vi.md)
 - **Turkish guide**: [`guide_tr.md`](./guide_tr.md)
 - **French guide**: [`guide_fr.md`](./guide_fr.md)
+- **Portuguese (Brazil) guide**: [`guide_pt-br.md`](./guide_pt-br.md)
 
 ## PDF Version
 
@@ -47,6 +48,7 @@ This repository contains study materials for the **Claude Certified Architect â€
 - **Vietnamese guide**: [`guide_vi.pdf`](./pdf/guide_vi.pdf)
 - **Turkish guide**: [`guide_tr.pdf`](./pdf/guide_tr.pdf)
 - **French guide**: [`guide_fr.pdf`](./pdf/guide_fr.pdf)
+- **Portuguese (Brazil) guide**: [`guide_pt-br.pdf`](./pdf/guide_pt-br.pdf)
 
 ## EPUB Version
 
@@ -64,6 +66,7 @@ This repository contains study materials for the **Claude Certified Architect â€
 - **Vietnamese guide**: [`guide_vi.epub`](./epub/guide_vi.epub)
 - **Turkish guide**: [`guide_tr.epub`](./epub/guide_tr.epub)
 - **French guide**: [`guide_fr.epub`](./epub/guide_fr.epub)
+- **Portuguese (Brazil) guide**: [`guide_pt-br.epub`](./epub/guide_pt-br.epub)
 
 ## Anki Deck (Practical Test)
 
@@ -73,6 +76,7 @@ This repository contains study materials for the **Claude Certified Architect â€
 - **Korean**: [`practical_test_ko.apkg`](./anki/practical_test_ko.apkg)
 - **Russian**: [`practical_test_ru.apkg`](./anki/practical_test_ru.apkg)
 - **Chinese**: [`practical_test_zh.apkg`](./anki/practical_test_zh.apkg)
+- **Portuguese (Brazil)**: [`practical_test_pt-br.apkg`](./anki/practical_test_pt-br.apkg)
 
 ## Video Materials
 - **English**: [`NotebookML`](https://notebooklm.google.com/notebook/4ffc65a7-5395-4a36-8832-23ed9b57f369)
