@@ -2680,12 +2680,12 @@ Edit, benzersiz olmayan metin eşleşmesi nedeniyle başarısız olduğunda:
 
 **Ne önerirsiniz?**
 
-- A) `~/.claude/skills/` altında farklı bir adla kişisel bir sürüm oluşturmak, örneğin `/my-commit`.
+- A) `~/.claude/skills/` altında farklı bir adla kişisel bir sürüm oluşturmak, örneğin `/my-commit`. **[DOĞRU]**
 - B) Proje skill frontmatter'ında kullanıcı adına dayalı koşullu mantık eklemek.
-- C) Aynı adla `~/.claude/skills/commit/SKILL.md` konumunda kişisel bir sürüm oluşturmak. **[DOĞRU]**
+- C) Aynı adla `~/.claude/skills/commit/SKILL.md` konumunda kişisel bir sürüm oluşturmak.
 - D) Kişisel skill frontmatter'ında proje sürümüne göre öncelik vermek için `override: true` ayarlamak.
 
-**Neden C:** Kişisel skill'ler, aynı ada sahip proje skill'lerine göre önceliklidir. `~/.claude/skills/commit/SKILL.md` konumundaki kişisel bir skill, ekibin proje skill'ini geçersiz kılar; böylece geliştirici, kendi kişisel kullanımı için tanıdık `/commit` komut adını korurken iş akışını özelleştirebilir. Bu yaklaşım A seçeneğinden daha iyidir, çünkü özgün komut adını korur ve ekip arkadaşlarını etkilemeden geliştiricinin iş akışını iyileştirir.
+**Neden A:** Kişisel skill'ler aynı ada sahip proje skill'lerine göre önceliklidir, bu yüzden `commit` adını yeniden kullanmak, ekibin skill'ini yalnızca bu geliştirici için sessizce gölgeler — ekip `/commit`'i her geliştirdiğinde güncellemeleri almayı bırakır ve aynı komut altında farklı bir skill çalıştırdığını hatırlaması gerekir. Kişisel sürümü `/my-commit` olarak adlandırmak bu çakışmayı tamamen ortadan kaldırır: geliştirici ekibin bakımını yaptığı `/commit`'i kullanmaya devam eder ve kişisel iş akışı için açıkça adlandırılmış, ayrı bir skill elde eder; ikisini karıştırma veya ekip güncellemelerini kaçırma riski olmaz.
 
 ---
 

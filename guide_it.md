@@ -2801,12 +2801,12 @@ Quando `Edit` fallisce per match non univoco:
 
 **Cosa consigli?**
 
-- A) Creare una versione personale in `~/.claude/skills/` con un nome diverso, ad esempio `/my-commit`.
+- A) Creare una versione personale in `~/.claude/skills/` con un nome diverso, ad esempio `/my-commit`. **[CORRETTA]**
 - B) Aggiungere logica condizionale basata sul nome utente nel frontmatter della skill di progetto.
-- C) Creare una versione personale in `~/.claude/skills/commit/SKILL.md` con lo stesso nome. **[CORRETTA]**
+- C) Creare una versione personale in `~/.claude/skills/commit/SKILL.md` con lo stesso nome.
 - D) Impostare `override: true` nel frontmatter della skill personale per darle priorità rispetto alla versione di progetto.
 
-**Perché C:** Le skill personali hanno la precedenza sulle skill di progetto con lo stesso nome. Una skill personale in `~/.claude/skills/commit/SKILL.md` sovrascriverà la skill di progetto del team, permettendo allo sviluppatore di personalizzare il proprio workflow mantenendo il nome familiare del comando `/commit` per il proprio uso personale. Questo approccio è migliore dell'opzione A perché conserva il nome originale del comando, migliorando il workflow dello sviluppatore senza influenzare i compagni di team.
+**Perché A:** Le skill personali hanno la precedenza sulle skill di progetto con lo stesso nome, quindi riutilizzare il nome `commit` nasconderebbe silenziosamente la skill del team solo per questo sviluppatore, che smetterebbe di ricevere gli aggiornamenti ogni volta che il team migliora `/commit` e dovrebbe ricordarsi di star eseguendo una skill diversa sotto lo stesso comando. Chiamare la variante personale `/my-commit` evita del tutto questo conflitto: lo sviluppatore continua a usare il `/commit` mantenuto dal team e ottiene una skill separata, chiaramente identificata, per il proprio workflow personale, senza rischio di confondere le due o perdere gli aggiornamenti del team.
 
 ---
 

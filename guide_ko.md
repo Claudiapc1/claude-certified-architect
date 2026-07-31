@@ -2689,12 +2689,12 @@ Edit이 고유하지 않은 텍스트 일치 때문에 실패할 때:
 
 **무엇을 권장하나요?**
 
-- A) `~/.claude/skills/` 아래 `/my-commit` 같은 다른 이름으로 개인 버전을 만든다.
+- A) `~/.claude/skills/` 아래 `/my-commit` 같은 다른 이름으로 개인 버전을 만든다. **[정답]**
 - B) 프로젝트 Skill frontmatter에 사용자 이름 기반 조건부 로직을 추가한다.
-- C) 같은 이름으로 `~/.claude/skills/commit/SKILL.md`에 개인 버전을 만든다. **[정답]**
+- C) 같은 이름으로 `~/.claude/skills/commit/SKILL.md`에 개인 버전을 만든다.
 - D) 개인 Skill frontmatter에 `override: true`를 설정해 프로젝트 버전보다 우선하게 한다.
 
-**C인 이유:** 같은 이름의 개인 Skill은 프로젝트 Skill보다 우선합니다. `~/.claude/skills/commit/SKILL.md`의 개인 Skill은 팀의 프로젝트 Skill을 override해, 개발자가 개인 용도로 익숙한 `/commit` 명령 이름을 유지하면서 workflow를 사용자 지정할 수 있습니다. 이 접근은 원래 명령 이름을 보존해 개인 workflow는 유지하면서 팀원에게 영향을 주지 않으므로 A보다 낫습니다.
+**A인 이유:** 개인 Skill은 같은 이름의 프로젝트 Skill보다 우선하므로, `commit`이라는 이름을 재사용하면 이 개발자에게만 팀의 Skill이 조용히 가려집니다. 팀이 `/commit`을 개선해도 업데이트를 받지 못하게 되고, 같은 명령으로 다른 Skill을 실행하고 있다는 사실을 스스로 기억해야 합니다. 개인 버전에 `/my-commit`이라는 이름을 붙이면 이런 충돌을 완전히 피할 수 있습니다. 개발자는 팀이 관리하는 `/commit`을 계속 사용하면서, 개인 workflow를 위한 별도의 명확히 구분된 Skill을 갖게 되어 둘을 혼동하거나 팀의 업데이트를 놓칠 위험이 없습니다.
 
 ---
 

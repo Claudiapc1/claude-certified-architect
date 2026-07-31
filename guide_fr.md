@@ -2687,12 +2687,12 @@ Lorsque Edit échoue en raison d'une correspondance de texte non unique :
 
 **Que recommandez-vous ?**
 
-- A) Créer une version personnelle sous `~/.claude/skills/` avec un nom différent, p. ex. `/my-commit`.
+- A) Créer une version personnelle sous `~/.claude/skills/` avec un nom différent, p. ex. `/my-commit`. **[CORRECT]**
 - B) Ajouter une logique conditionnelle basée sur le nom d'utilisateur dans le frontmatter du skill de projet.
-- C) Créer une version personnelle dans `~/.claude/skills/commit/SKILL.md` avec le même nom. **[CORRECT]**
+- C) Créer une version personnelle dans `~/.claude/skills/commit/SKILL.md` avec le même nom.
 - D) Définir `override: true` dans le frontmatter du skill personnel pour le prioriser sur la version de projet.
 
-**Pourquoi C :** Les skills personnels ont la priorité sur les skills de projet de même nom. Un skill personnel dans `~/.claude/skills/commit/SKILL.md` remplacera le skill de projet de l'équipe, permettant au développeur de personnaliser son workflow tout en conservant le nom de commande familier `/commit` pour son usage personnel. Cette approche est meilleure que l'option A car elle préserve le nom de commande d'origine, améliorant le workflow du développeur sans affecter ses coéquipiers.
+**Pourquoi A :** Les skills personnels ont la priorité sur les skills de projet portant le même nom. Réutiliser le nom `commit` masquerait donc silencieusement le skill de l'équipe pour ce seul développeur — il cesserait de recevoir les mises à jour à chaque amélioration de `/commit` par l'équipe, et devrait se rappeler qu'il exécute un skill différent sous la même commande. Nommer la variante personnelle `/my-commit` évite entièrement ce conflit : le développeur continue d'utiliser le `/commit` maintenu par l'équipe et dispose d'un skill séparé, clairement nommé, pour son workflow personnel, sans risque de confusion ni de mise à jour manquée.
 
 ---
 

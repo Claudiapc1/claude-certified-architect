@@ -2687,12 +2687,12 @@ Khi Edit thất bại do khớp văn bản không duy nhất:
 
 **Bạn khuyến nghị điều gì?**
 
-- A) Tạo một phiên bản cá nhân dưới `~/.claude/skills/` với tên khác, ví dụ `/my-commit`.
+- A) Tạo một phiên bản cá nhân dưới `~/.claude/skills/` với tên khác, ví dụ `/my-commit`. **[ĐÁP ÁN ĐÚNG]**
 - B) Thêm logic điều kiện dựa trên username trong frontmatter của skill dự án.
-- C) Tạo một phiên bản cá nhân tại `~/.claude/skills/commit/SKILL.md` với cùng tên. **[ĐÁP ÁN ĐÚNG]**
+- C) Tạo một phiên bản cá nhân tại `~/.claude/skills/commit/SKILL.md` với cùng tên.
 - D) Đặt `override: true` trong frontmatter của skill cá nhân để ưu tiên nó hơn phiên bản dự án.
 
-**Vì sao C:** Các skill cá nhân được ưu tiên hơn các skill dự án có cùng tên. Một skill cá nhân tại `~/.claude/skills/commit/SKILL.md` sẽ ghi đè skill dự án của nhóm, cho phép lập trình viên tùy chỉnh quy trình làm việc của họ trong khi vẫn giữ tên lệnh `/commit` quen thuộc cho mục đích sử dụng cá nhân. Cách tiếp cận này tốt hơn phương án A vì nó giữ nguyên tên lệnh ban đầu, cải thiện quy trình làm việc của lập trình viên mà không ảnh hưởng đến đồng đội.
+**Vì sao A:** Các skill cá nhân được ưu tiên hơn các skill dự án có cùng tên, vì vậy việc dùng lại tên `commit` sẽ âm thầm che khuất skill của nhóm chỉ đối với riêng lập trình viên này — họ sẽ ngừng nhận được các cập nhật mỗi khi nhóm cải tiến `/commit`, và phải tự nhớ rằng mình đang chạy một skill khác dưới cùng một lệnh. Đặt tên phiên bản cá nhân là `/my-commit` giúp tránh hoàn toàn xung đột này: lập trình viên vẫn tiếp tục dùng `/commit` do nhóm duy trì, đồng thời có một skill riêng, được đặt tên rõ ràng cho quy trình làm việc cá nhân, không có nguy cơ nhầm lẫn giữa hai skill hay bỏ lỡ các cập nhật của nhóm.
 
 ---
 
